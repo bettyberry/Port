@@ -8,9 +8,9 @@ import { useEffect, useState } from "react";
 export function AboutSection() {
   const skills = [
     { name: "React & Next.js", level: "Expert" },
-    { name: "TypeScript", level: "Advanced" },
+    { name: "Tailwind & TypeScript", level: "Advanced" },
     { name: "Node.js", level: "Advanced" },
-    { name: "Python", level: "Intermediate" },
+    { name: "Python", level: "Advanced" },
     { name: "MongoDB", level: "Advanced" },
     { name: "UI/UX Design", level: "Intermediate" },
   ];
@@ -82,22 +82,17 @@ export function AboutSection() {
               </h3>
               <div className="space-y-3 text-base md:text-lg leading-relaxed text-black/80">
                 <p>
-                  I fell in love with coding during my Computer Science studies,
-                  where I discovered the perfect blend of logic and creativity.
-                  What began as curiosity became a passion for building digital
-                  experiences that matter.
-                </p>
-                <p>
-                  Over the past few years, I’ve collaborated with startups and
-                  established companies—turning ideas into scalable web
-                  applications. I specialize in frontend development with React
-                  and TypeScript while building strong, efficient backends.
-                </p>
-                <p>
-                  Beyond coding, I explore modern design trends, contribute to
-                  open source, and mentor aspiring developers. I believe great
-                  software should be accessible, human-centered, and timeless.
-                </p>
+  I fell in love with coding for the way it blends logic with creativity. What started as curiosity quickly became a passion for crafting digital experiences that make an impact.
+</p>
+
+<p>
+  Over time, I’ve worked on turning ideas into meaningful, scalable web applications using React, TypeScript, and modern backend tools—bringing both design and functionality together.
+</p>
+
+<p>
+  I’m driven by clean design, accessibility, and the joy of helping others grow through code. For me, great software is as much about people as it is about technology.
+</p>
+
               </div>
             </motion.div>
 

@@ -125,19 +125,27 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Right: Image */}
+          {/* Right: Image with visible rotated rectangle */}
           <div className="relative order-1 lg:order-2">
             <div className="relative w-full max-w-md mx-auto">
-              <div className="absolute inset-0 rounded-3xl shadow-2xl bg-[#E8DEFF]"></div>
+              {/* Rotated rectangle behind */}
+              <div className="absolute -inset-1 bg-[#9B5DE0]/60 rotate-3 rounded-3xl z-0 shadow-md"></div>
 
               <motion.div
                 initial={{ rotate: -6, y: 50, opacity: 0 }}
                 animate={{ rotate: -3, y: 0, opacity: 1 }}
                 whileHover={{ scale: 1.05, rotate: -2, transition: { duration: 0.3 } }}
                 transition={{ duration: 1.2, ease: "easeOut" }}
-                className="relative rounded-3xl overflow-hidden shadow-2xl bg-white"
+                className="relative rounded-3xl overflow-hidden shadow-2xl bg-white z-10"
               >
-                <Image src="/betty.jpg" alt="Betty at work" width={500} height={500} className="w-full h-96 object-cover" priority />
+                <Image
+                  src="/betty.jpg"
+                  alt="Betty at work"
+                  width={500}
+                  height={500}
+                  className="w-full h-96 object-cover"
+                  priority
+                />
               </motion.div>
             </div>
 
@@ -145,7 +153,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.6 }}
-              className="absolute -top-4 -right-4 px-4 py-2 rounded-xl shadow-lg text-sm font-medium bg-white text-black"
+              className="absolute -top-4 -right-4 px-4 py-2 rounded-xl shadow-lg text-sm font-medium bg-white text-black z-20"
             >
               3+ Years Experience
             </motion.div>

@@ -72,6 +72,7 @@ export function ContactSection() {
   };
 
   return (
+    <>
     <section id="contact" className="py-20 px-6 bg-[#FAF5FF]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
@@ -299,8 +300,10 @@ export function ContactSection() {
         </div>
       </div>
 
-      <footer className="mt-32 bg-gradient-to-b from-[#7B1E7A] to-[#56125A] text-white">
-        <div className=" px-6 py-16 grid lg:grid-cols-3 gap-12">
+     
+    </section>
+     <footer className="mt-32 bg-gradient-to-b from-[#7B1E7A] to-[#56125A] text-white">
+        <div className=" px-6 py-16 grid lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
           <div>
             <h3 className="text-3xl font-semibold mb-3 tracking-tight">
               Betelhem Tekle
@@ -346,6 +349,15 @@ export function ContactSection() {
                 <MailIcon size={18} />
               </a>
             </div>
+
+             <div className="mt-10">
+            <a
+              href="#top"
+              className="inline-block bg-[#C97DF0] text-white px-5 py-2 rounded-full text-sm hover:bg-[#B561E7] transition transform hover:scale-105"
+            >
+              Back to Top ↑
+            </a>
+          </div>
           </div>
 
           {/* Quick Links */}
@@ -372,21 +384,14 @@ export function ContactSection() {
           </div>
         </div>
 
-        <div className="border-t border-[#C97DF0]/40 mt-12 pt-6 text-center text-sm text-[#F3E8FF]">
+        <div className="border-t border-[#C97DF0]/40 mt-12 pt-6 pb-6 text-center text-sm text-[#F3E8FF]">
           <p>
             © 2025 <span className="font-semibold text-white">Betelhem Tekle CodeCraft</span>. Made
             with <span className="text-pink-300">♥</span> & creativity.
           </p>
-          <div className="mt-4">
-            <a
-              href="#top"
-              className="inline-block bg-[#C97DF0] text-white px-5 py-2 rounded-full text-sm hover:bg-[#B561E7] transition transform hover:scale-105"
-            >
-              Back to Top ↑
-            </a>
-          </div>
+         
         </div>
       </footer>
-    </section>
+    </>
   );
 }
