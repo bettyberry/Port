@@ -86,10 +86,9 @@ export function ContactSection() {
           </p>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid lg:grid-cols-3 gap-12">
+<div className="grid lg:grid-cols-3 gap-12 ">
           {/* Contact Form */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 mt-10">
             <div className="rounded-3xl p-8 shadow-md bg-white hover:shadow-xl transition-all duration-300">
               <div className="mb-8">
                 <h3 className="text-2xl font-semibold mb-2 text-[#7B1E7A]">
@@ -134,61 +133,9 @@ export function ContactSection() {
                   </div>
                 </div>
 
-                {/* Budget & Timeline */}
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="budget" className="text-[#333]">
-                      Project Budget
-                    </Label>
-                    <select
-                      id="budget"
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleChange}
-                      className="mt-2 w-full px-3 py-2 border border-gray-200 rounded-xl focus:border-[#7B1E7A] focus:outline-none"
-                    >
-                      <option value="">Select budget range</option>
-                      <option value="5k-10k">$5k - $10k</option>
-                      <option value="10k-25k">$10k - $25k</option>
-                      <option value="25k-50k">$25k - $50k</option>
-                      <option value="50k+">$50k+</option>
-                    </select>
-                  </div>
-                  <div>
-                    <Label htmlFor="timeline" className="text-[#333]">
-                      Timeline
-                    </Label>
-                    <select
-                      id="timeline"
-                      name="timeline"
-                      value={formData.timeline}
-                      onChange={handleChange}
-                      className="mt-2 w-full px-3 py-2 border border-gray-200 rounded-xl focus:border-[#7B1E7A] focus:outline-none"
-                    >
-                      <option value="">Select timeline</option>
-                      <option value="asap">ASAP</option>
-                      <option value="1-2months">1–2 months</option>
-                      <option value="3-6months">3–6 months</option>
-                      <option value="6months+">6+ months</option>
-                    </select>
-                  </div>
-                </div>
+              
 
-                {/* Subject */}
-                <div>
-                  <Label htmlFor="subject" className="text-[#333]">
-                    Project Subject *
-                  </Label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="mt-2 border-gray-200 focus:border-[#7B1E7A] rounded-xl"
-                    placeholder="Brief project title"
-                  />
-                </div>
+               
 
                 {/* Message */}
                 <div>
@@ -214,7 +161,7 @@ export function ContactSection() {
                     disabled={status === "sending"}
                     className="w-full py-3 rounded-xl text-white font-medium hover:opacity-90 transition-all duration-300"
                     style={{
-                      background: "linear-gradient(90deg, #DE8CF0, #C97DF0)",
+                      background: "linear-gradient(90deg, #d208ffff, #a400f6ff)",
                     }}
                   >
                     <Send className="w-5 h-5 mr-2" />
@@ -265,21 +212,7 @@ export function ContactSection() {
               </div>
             </div>
 
-            <div className="rounded-3xl p-8 bg-white border-2 border-[#EBD5F9] shadow-sm">
-              <div className="flex items-center mb-4">
-                <Calendar className="w-6 h-6 mr-3 text-[#7B1E7A]" />
-                <h3 className="text-lg font-medium text-[#7B1E7A]">Availability</h3>
-              </div>
-              <p className="text-sm mb-4 text-[#444]">
-                Currently accepting new projects
-              </p>
-              <div className="w-full h-2 rounded-full bg-[#EBD5F9] mb-3">
-                <div
-                  className="h-2 rounded-full bg-[#7B1E7A]"
-                  style={{ width: "75%" }}
-                ></div>
-              </div>
-            </div>
+           
 
             <div className="rounded-3xl p-8 text-center bg-[#F3E8FF] shadow-sm">
               <Coffee className="w-8 h-8 mx-auto mb-4 text-[#7B1E7A]" />
