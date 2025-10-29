@@ -124,10 +124,10 @@ export function AboutSection() {
                       style={{
                         backgroundColor:
                           skill.level === "Expert"
-                            ? "#7B1E7A"
+                            ? "#a606d6ff"
                             : skill.level === "Advanced"
-                            ? "#A855F7"
-                            : "#DE8CF0",
+                            ? "#a972deff"
+                            : "#bd8ac9ff",
                         color: "white",
                       }}
                     >

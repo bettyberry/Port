@@ -113,7 +113,7 @@ export function Portfolio() {
                   ))}
                 </div>
 
-                <button className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-[#7B1E7A] to-[#DE8CF0] text-white text-sm font-medium hover:opacity-90 transition mt-3">
+                <button className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#BE29EC] text-white text-sm font-medium hover:opacity-90 transition mt-3">
                   View Project <ArrowRight size={16} />
                 </button>
               </div>

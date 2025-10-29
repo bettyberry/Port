@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -53,7 +54,9 @@ export default function HeroSection() {
                 key={id}
                 onClick={() => scrollToSection(id)}
                 className={`relative cursor-pointer capitalize transition-all duration-300 ${
-                  active === id ? "text-[#7B1E7A]" : "text-black hover:text-[#7B1E7A]"
+                  active === id
+                    ? "text-[#7B1E7A]"
+                    : "text-black hover:text-[#7B1E7A]"
                 }`}
               >
                 {id}
@@ -67,7 +70,10 @@ export default function HeroSection() {
           </ul>
 
           <div className="md:hidden">
-            <motion.div whileTap={{ scale: 0.9 }} className="cursor-pointer text-[#7B1E7A]">
+            <motion.div
+              whileTap={{ scale: 0.9 }}
+              className="cursor-pointer text-[#7B1E7A]"
+            >
               ☰
             </motion.div>
           </div>
@@ -79,28 +85,68 @@ export default function HeroSection() {
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Text */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
             className="space-y-8 order-2 lg:order-1"
           >
-            <h1 className="text-5xl md:text-7xl font-poppins font-bold leading-tight text-black">
-              <span>Betelhem</span>
-              <br />
-              <span className="text-[#7B1E7A]">Tekle</span>
-            </h1>
+            {/* Animated Heading */}
+            <motion.h1
+              className="text-5xl md:text-7xl font-poppins font-bold leading-tight text-[#1A1A1A]"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: 1,
+                  transition: { staggerChildren: 0.06 },
+                },
+              }}
+            >
+              {"Betelhem Tekle".split("").map((char, i) => (
+                <motion.span
+                  key={i}
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  transition={{ duration: 0.4 }}
+                  className={char === " " ? "mr-2" : ""}
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </motion.h1>
 
-            <p className="text-xl md:text-2xl font-poppins font-semibold text-black/80">
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="text-xl md:text-2xl font-semibold text-black/80 font-poppins"
+            >
               Full-Stack Developer & UI/UX Enthusiast
-            </p>
+            </motion.p>
 
-            <p className="text-lg leading-relaxed max-w-lg text-black/70 font-poppins font-normal">
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9, duration: 0.8 }}
+              className="text-lg leading-relaxed max-w-lg text-black/70 font-poppins font-normal"
+            >
               I transform complex ideas into elegant digital solutions.
               Specializing in React, Node.js, and modern web technologies to
               create seamless user experiences.
-            </p>
+            </motion.p>
 
-            <div className="flex flex-wrap gap-4 items-center">
+            {/* Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2, duration: 0.8 }}
+              className="flex flex-wrap gap-4 items-center"
+            >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -110,30 +156,55 @@ export default function HeroSection() {
               </motion.button>
 
               <div className="flex gap-3">
-                <motion.a whileHover={{ scale: 1.1 }} href="https://github.com/bettyberry" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white shadow-md">
+                <motion.a
+                  whileHover={{ scale: 1.1 }}
+                  href="https://github.com/bettyberry"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-white shadow-md"
+                >
                   <Github className="w-5 h-5 text-black" />
                 </motion.a>
 
-                <motion.a whileHover={{ scale: 1.1 }} href="https://www.linkedin.com/in/betelhem-tekle-0717b4248/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white shadow-md">
+                <motion.a
+                  whileHover={{ scale: 1.1 }}
+                  href="https://www.linkedin.com/in/betelhem-tekle-0717b4248/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-white shadow-md"
+                >
                   <Linkedin className="w-5 h-5 text-black" />
                 </motion.a>
 
-                <motion.a whileHover={{ scale: 1.1 }} href="mailto:betelhemtekle2021@gmail.com" className="p-3 rounded-full bg-white shadow-md">
+                <motion.a
+                  whileHover={{ scale: 1.1 }}
+                  href="mailto:betelhemtekle2021@gmail.com"
+                  className="p-3 rounded-full bg-white shadow-md"
+                >
                   <Mail className="w-5 h-5 text-black" />
                 </motion.a>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* Right: Image */}
           <div className="relative order-1 lg:order-2">
-            <div className="relative w-full max-w-md mx-auto">
-              <div className="absolute -inset-1 bg-[#9B5DE0]/60 rotate-3 rounded-3xl z-0 shadow-md"></div>
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.5, duration: 1 }}
+              className="relative w-full max-w-md mx-auto"
+            >
+              <div className="absolute -inset-1 bg-[#BE29EC]/80 rotate-3 rounded-3xl z-0 shadow-md animate-pulse"></div>
 
               <motion.div
                 initial={{ rotate: -6, y: 50, opacity: 0 }}
                 animate={{ rotate: -3, y: 0, opacity: 1 }}
-                whileHover={{ scale: 1.05, rotate: -2, transition: { duration: 0.3 } }}
+                whileHover={{
+                  scale: 1.05,
+                  rotate: -2,
+                  transition: { duration: 0.3 },
+                }}
                 transition={{ duration: 1.2, ease: "easeOut" }}
                 className="relative rounded-3xl overflow-hidden shadow-2xl bg-white z-10"
               >
@@ -146,7 +217,7 @@ export default function HeroSection() {
                   priority
                 />
               </motion.div>
-            </div>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: -10 }}

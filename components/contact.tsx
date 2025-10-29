@@ -185,7 +185,7 @@ export function ContactSection() {
 
           {/* Contact Info Side */}
           <div className="space-y-8">
-            <div className="rounded-3xl p-8 bg-gradient-to-br from-[#DE8CF0] to-[#C97DF0] text-white shadow-md">
+            <div className="rounded-3xl p-8 font-bold bg-[#BE29EC]  text-white shadow-md">
               <h3 className="text-xl mb-6 font-medium">Get in Touch</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
@@ -214,7 +214,7 @@ export function ContactSection() {
 
            
 
-            <div className="rounded-3xl p-8 text-center bg-[#F3E8FF] shadow-sm">
+            <div className="rounded-3xl p-8 text-center bg-[#f0c7fc]  shadow-sm">
               <Coffee className="w-8 h-8 mx-auto mb-4 text-[#7B1E7A]" />
               <h3 className="text-lg mb-2 font-medium text-[#7B1E7A]">
                 Prefer to Chat?
